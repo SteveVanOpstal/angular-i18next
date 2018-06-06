@@ -1,6 +1,6 @@
 {
     "name": "angular-i18next",
-    "version": "3.2.0",
+    "version": "3.4.2",
     "homepage": "https://github.com/Romanchuk/angular-i18next#readme",
     "author": {
         "name": "Sergey Romanchuk"
@@ -23,14 +23,15 @@
         "email": "rezety@gmail.com",
         "name": "Sergey Romanchuk"
     }],
+    "main": "angular-i18next.umd.js",
     "module": "angular-i18next.es5.js",
     "es2015": "angular-i18next.js",
     "typings": "angular-i18next.d.ts",
     "peerDependencies": {
-        "@angular/common": ">=4.0.0 <6.0.0",
-        "@angular/core": ">=4.0.0 <6.0.0",
-        "@angular/platform-browser": ">=4.0.0 <6.0.0",
-        "rxjs": "^5.5.2",
-        "i18next": ">=8.4.0 <11.0.0"
+        "@angular/common": ">=4.0.0 <7.0.0",
+        "@angular/core": ">=4.0.0 <7.0.0",
+        "@angular/platform-browser": ">=4.0.0 <7.0.0",
+        "rxjs": ">=5.5.2 <=7.0.0",
+        "i18next": ">=8.4.0 <12.0.0"
     }
 }

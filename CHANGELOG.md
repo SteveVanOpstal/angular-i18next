@@ -1,3 +1,38 @@
+<a name="3.4.2"></a>
+## [3.4.2](https://github.com/Romanchuk/angular-i18next/compare/v3.4.1...v3.4.2) (2018-05-05)
+
+
+
+<a name="3.4.1"></a>
+## [3.4.1](https://github.com/Romanchuk/angular-i18next/compare/v3.4.0...v3.4.1) (2018-04-29)
+
+- default formater fixes
+
+
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/Romanchuk/angular-i18next/compare/v3.3.0...v3.4.0) (2018-04-29)
+
+- i18next v11 support 
+- fix: [format pipe](https://github.com/Romanchuk/angular-i18next/issues/15)
+
+
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/Romanchuk/angular-i18next/compare/v3.3.0-beta.2...v3.3.0) (2018-03-12)
+
+- added umd bundle
+- comments cleanup
+- updated dev dependencies
+
+<a name="3.3.0-beta.2"></a>
+# [3.3.0-beta.2](https://github.com/Romanchuk/angular-i18next/compare/v3.3.0-beta.1...v3.3.0-beta.2) (2018-03-12)
+
+
+
+<a name="3.3.0-beta.1"></a>
+# [3.3.0-beta.1](https://github.com/Romanchuk/angular-i18next/compare/v3.2.0...v3.3.0-beta.1) (2018-02-04)
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/Romanchuk/angular-i18next/compare/v3.1.1...v3.2.0) (2018-01-17)
 
