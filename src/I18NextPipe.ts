@@ -1,49 +1,19 @@
-import { Inject, Injectable, Pipe, PipeTransform, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
+import { Inject, Injectable, Pipe, PipeTransform } from '@angular/core';
 
 import { I18NEXT_NAMESPACE, I18NEXT_SCOPE, I18NEXT_SERVICE } from './I18NEXT_TOKENS';
 import { ITranslationService } from './ITranslationService';
 @Injectable()
 @Pipe({
-    name: 'i18next', pure: false
+    name: 'i18next'
 })
-export class I18NextPipe implements PipeTransform, OnDestroy {
-  private _latestValue: string;
-  private _subscription: Subscription = null;
-
-  private _key;
-  private _options;
+export class I18NextPipe implements PipeTransform {
 
   constructor(
       @Inject(I18NEXT_SERVICE) private translateI18Next: ITranslationService,
       @Inject(I18NEXT_NAMESPACE) private ns: string | string[],
-      @Inject(I18NEXT_SCOPE) private scope: string | string[],
-      private cd: ChangeDetectorRef
-    ) {
-    this._subscription = this.translateI18Next.events.languageChanged.subscribe(() => {
-      if (this._key) {
-        this._latestValue = this.translate(this._key, this._options);
-        this.cd.markForCheck();
-      }
-    });
-  }
+      @Inject(I18NEXT_SCOPE) private scope: string | string[]) {}
 
   public transform(key: string | string[], options?: any): string {
-    this._latestValue = this.translate(key, options);
-
-    this._key = key;
-    this._options = options;
-
-    return this._latestValue;
-  }
-
-  ngOnDestroy() {
-    if (this._subscription) {
-      this._subscription.unsubscribe();
-    }
-  }
-
-  private translate(key: string | string[], options?: any): string {
     options = this.prepareOptions(options);
 
     const i18nOpts = this.translateI18Next.options;
